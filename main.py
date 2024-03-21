@@ -156,16 +156,64 @@
 # Створіть клас FileUtils, який має метод класу
 # count_lines, який приймає шлях до файлу і повертає
 # кількість рядків у файлі.
-
+# class FileUtils:
+#     @staticmethod
+#     def count_lines(file_path):
+#         try:
+#             with open(file_path, 'r', encoding='utf-8') as file:
+#                 lines = file.readlines()
+#                 line_count = len(lines)
+#             return line_count
+#         except FileNotFoundError:
+#             print("Такого файлу немає")
+#             return -1
+#         except ValueError as e:
+#             print("Сталася помилка", e)
+#             return -1
+#
+#
+# file_path = 'file1'
+# line_count = FileUtils.count_lines(file_path)
+# if line_count != -1:
+#     print(f"Кількість рядків у файлі {file_path}: {line_count}")
 
 # Завдання 5
 # Створіть клас Character, який має атрибути name, health
 # та damage. Реалізуйте метод класу attack, який виводить
 # повідомлення про атаку гравця.
+# class Character:
+#     def __init__(self, name, health, damage):
+#         self.name = name
+#         self.health = health
+#         self.damage = damage
+#     def attack(self):
+#         print(f"{self.name} атакує з уроном {self.damage}")
+#
+# player1 = Character("гравець1", 500, 100)
+# player2 = Character("гравець1", 1000, 500)
+#
+# player1.attack()
+# player2.attack()
 
 
 # Завдання 6
 # Створіть клас Student, який має атрибути name, age,
 # grade та courses. Реалізуйте метод класу add_course, який
 # додає новий предмет до списку курсів студента
-
+# class Student:
+#     def __init__(self, name, age, grade):
+#         self.name = name
+#         self.age = age
+#         self.grade = grade
+#         self.courses = []
+#
+#     def add_courses(self, courses):
+#         self.courses.append(courses)
+#
+# student1 = Student("Андрій", 14, "9 - А")
+# student1.add_courses("Інформатика")
+# student1.add_courses("Математика")
+#
+# print(f"Студент {student1.name} навчається в {student1.grade} та обрав такі курси: ")
+# for course in student1.courses:
+#     print(course)
